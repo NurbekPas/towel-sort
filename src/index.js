@@ -2,5 +2,5 @@
 // You should implement your task here.
 
 module.exports = function towelSort (matrix) {
-  return [];
+ return (matrix || []).reduce((accum, currentElement, idx) => accum = [...accum, ...(idx % 2 ? currentElement.reverse() : currentElement)], []);
 }
